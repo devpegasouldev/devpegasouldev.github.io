@@ -45,9 +45,9 @@
     <main class="max-w-4xl mx-auto px-6 py-16 flex-grow w-full space-y-12">
         
         <div>
-            <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Documentation</span>
+            <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Official Documentation</span>
             <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-2 mb-3">CustomDailyRewards Wiki</h1>
-            <p class="text-slate-400">Configuration guide, commands, and permissions for the CustomDailyRewards plugin.</p>
+            <p class="text-slate-400">Complete guide for Paper 1.21.8 / Java 21, covering commands, permissions, and modular reward configurations.</p>
         </div>
 
         <!-- Quick Links Card -->
@@ -62,25 +62,71 @@
         </div>
 
         <!-- Content Section -->
-        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
-            <h2 class="text-2xl font-bold text-white">Overview & Features</h2>
-            <ul class="list-disc list-inside space-y-2 text-slate-300">
-                <li><strong class="text-white">Admin GUI:</strong> Easy in-game configuration management.</li>
-                <li><strong class="text-white">LuckPerms Integration:</strong> Seamless permission and tier handling.</li>
-                <li><strong class="text-white">Modular YML:</strong> Independent configuration files per reward.</li>
-            </ul>
-
-            <h3 class="text-xl font-bold text-white pt-4">Commands</h3>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 font-mono text-sm space-y-2 text-slate-200">
-                <div><span class="text-indigo-400">/rewards</span> - Opens the rewards menu.</div>
-                <div><span class="text-indigo-400">/rewards reload</span> - Reloads plugin configurations.</div>
-                <div><span class="text-indigo-400">/rewards admin</span> - Opens the admin GUI.</div>
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-8 text-slate-300 leading-relaxed">
+            <div>
+                <h2 class="text-2xl font-bold text-white mb-4">Key Features</h2>
+                <ul class="list-disc list-inside space-y-2 text-slate-300">
+                    <li><strong class="text-white">GUI Menu:</strong> Interactive interface (`/daily`) with live, per-second countdown timers.</li>
+                    <li><strong class="text-white">Modular YML Storage:</strong> Individual configuration files under `plugins/CustomDailyRewards/rewards/` for each reward.</li>
+                    <li><strong class="text-white">Built-in NPC:</strong> Dependency-free NPC support (no Citizens required) that opens the GUI on right-click.</li>
+                    <li><strong class="text-white">LuckPerms & ExcellentCrates:</strong> Seamless rank-gating, permission checks, and console command execution.</li>
+                </ul>
             </div>
 
-            <h3 class="text-xl font-bold text-white pt-4">Permissions</h3>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 font-mono text-sm space-y-2 text-slate-200">
-                <div><span class="text-purple-400">customdailyrewards.use</span> - Allows using the rewards command.</div>
-                <div><span class="text-purple-400">customdailyrewards.admin</span> - Full administrative access.</div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-3">Commands & Permissions</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm font-mono border-collapse">
+                        <thead>
+                            <tr class="border-b border-slate-800 text-slate-400">
+                                <th class="py-3 px-4">Command</th>
+                                <th class="py-3 px-4">Permission</th>
+                                <th class="py-3 px-4 font-sans">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800/60 text-slate-200">
+                            <tr>
+                                <td class="py-3 px-4 text-indigo-400">/daily</td>
+                                <td class="py-3 px-4 text-purple-400">customdailyrewards.use</td>
+                                <td class="py-3 px-4 font-sans text-slate-300">Opens the rewards GUI</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-indigo-400">/dailyadmin reload</td>
+                                <td class="py-3 px-4 text-purple-400">customdailyrewards.admin</td>
+                                <td class="py-3 px-4 font-sans text-slate-300">Reloads config and reward files</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-indigo-400">/dailyadmin reset &lt;player&gt;</td>
+                                <td class="py-3 px-4 text-purple-400">customdailyrewards.admin</td>
+                                <td class="py-3 px-4 font-sans text-slate-300">Clears cooldowns for a player</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-indigo-400">/dailyadmin npc create</td>
+                                <td class="py-3 px-4 text-purple-400">customdailyrewards.admin</td>
+                                <td class="py-3 px-4 font-sans text-slate-300">Spawns a Daily Rewards NPC</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 text-indigo-400">/dailyadmin npc remove</td>
+                                <td class="py-3 px-4 text-purple-400">customdailyrewards.admin</td>
+                                <td class="py-3 px-4 font-sans text-slate-300">Removes nearest NPC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold text-white mb-3">Reward Configuration Example</h3>
+                <p class="text-slate-400 text-sm mb-3">Example structure for files inside `plugins/CustomDailyRewards/rewards/*.yml`:</p>
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-200 overflow-x-auto space-y-1">
+                    <div><span class="text-indigo-400">name</span>: <span class="text-emerald-400">"&lt;light_purple&gt;Void Reward&lt;/light_purple&gt;"</span></div>
+                    <div><span class="text-indigo-400">material</span>: <span class="text-cyan-400">ENDER_EYE</span></div>
+                    <div><span class="text-indigo-400">slot</span>: <span class="text-amber-400">13</span></div>
+                    <div><span class="text-indigo-400">permission</span>: <span class="text-emerald-400">"customdaily.void"</span></div>
+                    <div><span class="text-indigo-400">cooldown-hours</span>: <span class="text-amber-400">24</span></div>
+                    <div><span class="text-indigo-400">commands</span>:</div>
+                    <div class="pl-4">- <span class="text-emerald-400">"crates give %player% eteri 1"</span></div>
+                </div>
             </div>
         </div>
 
