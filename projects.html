@@ -30,6 +30,7 @@
         <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
             <a href="index.html" class="hover:text-indigo-400 transition">Home</a>
             <a href="projects.html" class="text-indigo-400 font-semibold transition">Projects & Games</a>
+            <a href="wiki.html" class="hover:text-indigo-400 transition">Wiki</a>
             <a href="about.html" class="hover:text-indigo-400 transition">About</a>
             <a href="contact.html" class="hover:text-indigo-400 transition">Contact</a>
         </nav>
@@ -45,12 +46,12 @@
         
         <div>
             <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">Portfolio & Creations</h1>
-            <p class="text-slate-400">A comprehensive list of active plugins, indie game developments, and internal software tools.</p>
+            <p class="text-slate-400">A comprehensive list of active plugins, mobile indie games, and software tools.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Project 1 -->
+            <!-- Project 1: CustomDailyRewards -->
             <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500/50 transition">
                 <div class="space-y-4">
                     <div class="flex justify-between items-center">
@@ -59,7 +60,7 @@
                     </div>
                     <h2 class="text-2xl font-bold text-white">CustomDailyRewards</h2>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        A modern, highly modular daily rewards plugin featuring an in-game Admin GUI, seamless LuckPerms authorization, and independent YML file management per reward.
+                        A modern, highly modular daily rewards plugin featuring an in-game Admin GUI, seamless LuckPerms authorization, and independent YML file management per reward[cite: 4].
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
                         <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Java 21</span>
@@ -69,30 +70,33 @@
                 </div>
                 <div class="pt-6 mt-6 border-t border-slate-800 flex justify-between items-center">
                     <span class="text-xs text-emerald-400 font-medium">● Active Development</span>
-                    <a href="https://modrinth.com" target="_blank" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition">View on Modrinth &rarr;</a>
+                    <div class="flex items-center space-x-4">
+                        <a href="wiki.html" class="text-xs font-semibold text-slate-300 hover:text-white transition">Wiki &rarr;</a>
+                        <a href="https://modrinth.com/plugin/customdailyrewards" target="_blank" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition">Modrinth &rarr;</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 2: Inferno (Google Play) -->
             <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-indigo-500/50 transition">
                 <div class="space-y-4">
                     <div class="flex justify-between items-center">
-                        <span class="text-xs bg-purple-950 text-purple-300 px-3 py-1 rounded-full border border-purple-800/50 font-medium">Indie Game Title</span>
-                        <span class="text-xs text-slate-500 font-mono">Concept Phase</span>
+                        <span class="text-xs bg-purple-950 text-purple-300 px-3 py-1 rounded-full border border-purple-800/50 font-medium">Mobile Game</span>
+                        <span class="text-xs text-slate-500 font-mono">Released</span>
                     </div>
-                    <h2 class="text-2xl font-bold text-white">Project: Voidrunner</h2>
+                    <h2 class="text-2xl font-bold text-white">Inferno</h2>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        An atmospheric standalone indie game featuring procedural world dynamics, unique light rendering pipelines, and immersive user interaction systems.
+                        An immersive mobile game available now on Google Play Store, designed with engaging mechanics and fluid performance.
                     </p>
                     <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">C#</span>
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Game Engine</span>
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Shaders</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Android</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Unity / C#</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md">Mobile Game</span>
                     </div>
                 </div>
                 <div class="pt-6 mt-6 border-t border-slate-800 flex justify-between items-center">
-                    <span class="text-xs text-purple-400 font-medium">● In Progress</span>
-                    <span class="text-xs font-semibold text-slate-500">Coming Soon</span>
+                    <span class="text-xs text-purple-400 font-medium">● Live on Store</span>
+                    <a href="https://play.google.com/store/apps/details?id=com.pegasoul.inferno&pcampaignid=web_share" target="_blank" class="text-xs font-semibold text-purple-400 hover:text-purple-300 transition">Google Play &rarr;</a>
                 </div>
             </div>
 
@@ -103,10 +107,11 @@
     <!-- Footer -->
     <footer class="border-t border-slate-800/80 py-8 px-6 md:px-12 text-center text-slate-500 text-sm bg-darkbg">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div>&copy; 2026 PEGASOULDEV. All rights reserved.</div>
+            <div>&copy; 2026 PEGASOULDEV. All rights reserved.[cite: 1, 2, 3, 4]</div>
             <div class="flex space-x-6 text-slate-400">
                 <a href="index.html" class="hover:text-indigo-400 transition">Home</a>
                 <a href="projects.html" class="hover:text-indigo-400 transition">Projects</a>
+                <a href="wiki.html" class="hover:text-indigo-400 transition">Wiki</a>
                 <a href="contact.html" class="hover:text-indigo-400 transition">Contact</a>
             </div>
         </div>
