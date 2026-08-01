@@ -47,7 +47,7 @@
         <div>
             <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Documentation</span>
             <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-2 mb-3">CustomDailyRewards Wiki</h1>
-            <p class="text-slate-400">A configurable daily rewards plugin for Paper 1.21.8 / Java 21 featuring a live GUI, built-in editor, and NPC support.</p>
+            <p class="text-slate-400">A configurable daily rewards plugin for Paper 1.21.8 / Java 21[cite: 11].</p>
         </div>
 
         <!-- Quick Links Card -->
@@ -61,30 +61,105 @@
             </a>
         </div>
 
-        <!-- Content Section -->
+        <!-- Commands & Permissions Section -->
         <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
-            <h2 class="text-2xl font-bold text-white">Overview & Features</h2>
-            <ul class="list-disc list-inside space-y-2 text-slate-300">
-                <li><strong class="text-white">In-game GUI Editor:</strong> Create, edit, and delete rewards directly in-game without touching files.</li>
-                <li><strong class="text-white">No Dependencies:</strong> Built-in NPC system (no Citizens required) and default SQLite cooldown storage.</li>
-                <li><strong class="text-white">Integrations:</strong> Seamless LuckPerms support for rank-gated rewards and ExcellentCrates hook.</li>
-                <li><strong class="text-white">Advanced Mechanics:</strong> Live per-second countdowns, auto-claim options, and dynamic custom model data.</li>
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Commands & Permissions</h2>
+            
+            <div class="overflow-x-auto mt-4">
+                <table class="w-full text-sm text-left text-slate-300">
+                    <thead class="text-xs text-slate-400 uppercase bg-slate-900/50">
+                        <tr>
+                            <th scope="col" class="px-4 py-3 rounded-tl-lg">Command</th>
+                            <th scope="col" class="px-4 py-3">Permission</th>
+                            <th scope="col" class="px-4 py-3 rounded-tr-lg">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/80">
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/daily</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.use<br><span class="text-slate-500">(default: true)</span></td>
+                            <td class="px-4 py-3">Opens the rewards GUI[cite: 11].</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/daily settings</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin<br><span class="text-slate-500">(default: op)</span></td>
+                            <td class="px-4 py-3">Opens the Reward Manager GUI[cite: 11].</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin reload</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
+                            <td class="px-4 py-3">Reloads config.yml and all reward files[cite: 11].</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin reset &lt;player&gt;</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
+                            <td class="px-4 py-3">Clears all cooldowns for a player[cite: 11].</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin npc create</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
+                            <td class="px-4 py-3">Spawns a Daily Rewards NPC at your location[cite: 11].</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin npc remove</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
+                            <td class="px-4 py-3">Removes the nearest Daily Rewards NPC[cite: 11].</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-lg font-bold text-white pt-4">Per-Reward Permissions</h3>
+            <p class="text-sm">
+                Permissions for specific rewards (e.g. <span class="font-mono text-purple-400">customdaily.void</span>) are defined directly inside each reward's own configuration file[cite: 11]. These are seamlessly checked through LuckPerms when it's installed[cite: 11].
+            </p>
+        </div>
+
+        <!-- In-game GUI Editor Section -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">In-game GUI Editor</h2>
+            
+            <p class="text-sm">
+                The plugin ships completely clean with no hardcoded rewards[cite: 11]. You can manage everything entirely in-game using the <span class="font-mono text-indigo-400">/daily settings</span> command (Requires OP or <span class="font-mono text-purple-400 text-xs">customdailyrewards.admin</span>)[cite: 11].
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        Reward Manager
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li><strong class="text-white">Emerald Button:</strong> Instantly creates a new reward with sensible defaults and opens it[cite: 11].</li>
+                        <li><strong class="text-white">Left-click:</strong> Opens the Reward Editor for the selected item[cite: 11].</li>
+                        <li><strong class="text-white">Shift + Right-click:</strong> Deletes the reward file and removes it from memory instantly[cite: 11].</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        Chat-Input System
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Text fields use a smart chat-input pattern instead of an anvil GUI[cite: 11].</li>
+                        <li>Click a property, and type your changes directly into the chat[cite: 11].</li>
+                        <li>Type <span class="font-mono text-rose-400">cancel</span> to abort or <span class="font-mono text-rose-400">clear</span> to wipe lists (like lore/commands)[cite: 11].</li>
+                        <li>Changes are saved directly to the YML files instantly[cite: 11]!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-bold text-white pt-6">Editable Properties</h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                <li><span class="text-indigo-400 font-semibold">Name & Lore:</span> Supports MiniMessage format[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Commands:</span> Setup console commands (supports <code class="text-xs bg-slate-800 px-1 rounded">%player%</code> and <code class="text-xs bg-slate-800 px-1 rounded">%amount%</code>)[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Cooldowns:</span> Easy formatting (e.g., 2h30m, 90m)[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Required Rank:</span> Direct LuckPerms integration[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Display Item:</span> Click with an item on your cursor to apply its material[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Toggles:</span> One-click toggles for Glowing, Auto-Claim, and Broadcast on Claim[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Custom Model Data:</span> Easy integer assignment[cite: 11].</li>
             </ul>
-
-            <h3 class="text-xl font-bold text-white pt-4">Commands</h3>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 font-mono text-sm space-y-2 text-slate-200">
-                <div><span class="text-indigo-400">/daily</span> - Opens the main rewards menu.</div>
-                <div><span class="text-indigo-400">/daily settings</span> - Opens the Reward Manager (In-game Editor).</div>
-                <div><span class="text-indigo-400">/dailyadmin reload</span> - Reloads config.yml and reward files.</div>
-                <div><span class="text-indigo-400">/dailyadmin reset &lt;player&gt;</span> - Clears all cooldowns for a specific player.</div>
-                <div><span class="text-indigo-400">/dailyadmin npc &lt;create/remove&gt;</span> - Spawns or removes the nearest Daily Rewards NPC.</div>
-            </div>
-
-            <h3 class="text-xl font-bold text-white pt-4">Permissions</h3>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4 font-mono text-sm space-y-2 text-slate-200">
-                <div><span class="text-purple-400">customdailyrewards.use</span> - Allows opening the rewards GUI (Granted by default).</div>
-                <div><span class="text-purple-400">customdailyrewards.admin</span> - Full administrative access to /daily settings and /dailyadmin.</div>
-            </div>
         </div>
 
     </main>
