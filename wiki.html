@@ -47,7 +47,7 @@
         <div>
             <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Documentation</span>
             <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-2 mb-3">CustomDailyRewards Wiki</h1>
-            <p class="text-slate-400">A configurable daily rewards plugin for Paper 1.21.8 / Java 21[cite: 11].</p>
+            <p class="text-slate-400">A configurable daily rewards plugin for Paper 1.21.8 / Java 21.</p>
         </div>
 
         <!-- Quick Links Card -->
@@ -78,32 +78,37 @@
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/daily</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.use<br><span class="text-slate-500">(default: true)</span></td>
-                            <td class="px-4 py-3">Opens the rewards GUI[cite: 11].</td>
+                            <td class="px-4 py-3">Opens the rewards GUI.</td>
                         </tr>
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/daily settings</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin<br><span class="text-slate-500">(default: op)</span></td>
-                            <td class="px-4 py-3">Opens the Reward Manager GUI[cite: 11].</td>
+                            <td class="px-4 py-3">Opens the Reward Manager GUI.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/daily language</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.use<br><span class="text-slate-500">(default: true)</span></td>
+                            <td class="px-4 py-3">Opens the language selector.</td>
                         </tr>
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin reload</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
-                            <td class="px-4 py-3">Reloads config.yml and all reward files[cite: 11].</td>
+                            <td class="px-4 py-3">Reloads config.yml and all reward files.</td>
                         </tr>
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin reset &lt;player&gt;</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
-                            <td class="px-4 py-3">Clears all cooldowns for a player[cite: 11].</td>
+                            <td class="px-4 py-3">Clears all cooldowns for a player.</td>
                         </tr>
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin npc create</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
-                            <td class="px-4 py-3">Spawns a Daily Rewards NPC at your location[cite: 11].</td>
+                            <td class="px-4 py-3">Spawns a Daily Rewards NPC at your location.</td>
                         </tr>
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/dailyadmin npc remove</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.admin</td>
-                            <td class="px-4 py-3">Removes the nearest Daily Rewards NPC[cite: 11].</td>
+                            <td class="px-4 py-3">Removes the nearest Daily Rewards NPC.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -111,7 +116,7 @@
 
             <h3 class="text-lg font-bold text-white pt-4">Per-Reward Permissions</h3>
             <p class="text-sm">
-                Permissions for specific rewards (e.g. <span class="font-mono text-purple-400">customdaily.void</span>) are defined directly inside each reward's own configuration file[cite: 11]. These are seamlessly checked through LuckPerms when it's installed[cite: 11].
+                Permissions for specific rewards (e.g. <span class="font-mono text-purple-400">customdaily.void</span>) are defined directly inside each reward's own configuration file, and checked automatically through LuckPerms whenever it's installed.
             </p>
         </div>
 
@@ -120,7 +125,7 @@
             <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">In-game GUI Editor</h2>
             
             <p class="text-sm">
-                The plugin ships completely clean with no hardcoded rewards[cite: 11]. You can manage everything entirely in-game using the <span class="font-mono text-indigo-400">/daily settings</span> command (Requires OP or <span class="font-mono text-purple-400 text-xs">customdailyrewards.admin</span>)[cite: 11].
+                The plugin ships completely clean, with no hardcoded rewards. Everything is managed entirely in-game through the <span class="font-mono text-indigo-400">/daily settings</span> command (requires OP or <span class="font-mono text-purple-400 text-xs">customdailyrewards.admin</span>).
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
@@ -130,9 +135,9 @@
                         Reward Manager
                     </h3>
                     <ul class="list-disc list-inside text-sm space-y-2">
-                        <li><strong class="text-white">Emerald Button:</strong> Instantly creates a new reward with sensible defaults and opens it[cite: 11].</li>
-                        <li><strong class="text-white">Left-click:</strong> Opens the Reward Editor for the selected item[cite: 11].</li>
-                        <li><strong class="text-white">Shift + Right-click:</strong> Deletes the reward file and removes it from memory instantly[cite: 11].</li>
+                        <li><strong class="text-white">Emerald Button:</strong> Instantly creates a new reward with sensible defaults and opens it in the editor.</li>
+                        <li><strong class="text-white">Left-click:</strong> Opens the Reward Editor for the selected item.</li>
+                        <li><strong class="text-white">Shift + Right-click:</strong> Deletes the reward file and removes it from memory instantly.</li>
                     </ul>
                 </div>
                 
@@ -142,24 +147,59 @@
                         Chat-Input System
                     </h3>
                     <ul class="list-disc list-inside text-sm space-y-2">
-                        <li>Text fields use a smart chat-input pattern instead of an anvil GUI[cite: 11].</li>
-                        <li>Click a property, and type your changes directly into the chat[cite: 11].</li>
-                        <li>Type <span class="font-mono text-rose-400">cancel</span> to abort or <span class="font-mono text-rose-400">clear</span> to wipe lists (like lore/commands)[cite: 11].</li>
-                        <li>Changes are saved directly to the YML files instantly[cite: 11]!</li>
+                        <li>Text fields use a smart chat-input pattern instead of an anvil GUI.</li>
+                        <li>Click a property, then type your change directly into chat.</li>
+                        <li>Type <span class="font-mono text-rose-400">cancel</span> to abort, or <span class="font-mono text-rose-400">clear</span> to wipe lists like lore and commands.</li>
+                        <li>Every change is saved straight to the reward's YML file, instantly.</li>
                     </ul>
                 </div>
             </div>
 
             <h3 class="text-lg font-bold text-white pt-6">Editable Properties</h3>
             <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
-                <li><span class="text-indigo-400 font-semibold">Name & Lore:</span> Supports MiniMessage format[cite: 11].</li>
-                <li><span class="text-indigo-400 font-semibold">Commands:</span> Setup console commands (supports <code class="text-xs bg-slate-800 px-1 rounded">%player%</code> and <code class="text-xs bg-slate-800 px-1 rounded">%amount%</code>)[cite: 11].</li>
-                <li><span class="text-indigo-400 font-semibold">Cooldowns:</span> Easy formatting (e.g., 2h30m, 90m)[cite: 11].</li>
-                <li><span class="text-indigo-400 font-semibold">Required Rank:</span> Direct LuckPerms integration[cite: 11].</li>
-                <li><span class="text-indigo-400 font-semibold">Display Item:</span> Click with an item on your cursor to apply its material[cite: 11].</li>
-                <li><span class="text-indigo-400 font-semibold">Toggles:</span> One-click toggles for Glowing, Auto-Claim, and Broadcast on Claim[cite: 11].</li>
-                <li><span class="text-indigo-400 font-semibold">Custom Model Data:</span> Easy integer assignment[cite: 11].</li>
+                <li><span class="text-indigo-400 font-semibold">Name & Lore:</span> Supports MiniMessage formatting.</li>
+                <li><span class="text-indigo-400 font-semibold">Commands:</span> Console commands with <code class="text-xs bg-slate-800 px-1 rounded">%player%</code> and <code class="text-xs bg-slate-800 px-1 rounded">%amount%</code> placeholder support.</li>
+                <li><span class="text-indigo-400 font-semibold">Cooldowns:</span> Simple duration formatting (e.g. 2h30m, 90m).</li>
+                <li><span class="text-indigo-400 font-semibold">Required Rank:</span> Direct LuckPerms integration.</li>
+                <li><span class="text-indigo-400 font-semibold">Display Item:</span> Click with an item on your cursor to apply its material as the icon.</li>
+                <li><span class="text-indigo-400 font-semibold">Toggles:</span> One-click switches for Glowing, Auto-Claim, and Broadcast on Claim.</li>
+                <li><span class="text-indigo-400 font-semibold">Custom Model Data:</span> Click while holding a resource-pack item to inherit its material and model data in one step, or type a value manually in chat.</li>
             </ul>
+        </div>
+
+        <!-- Language Selector Section -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Language Selector</h2>
+
+            <p class="text-sm">
+                Every player-facing message is available in five languages out of the box: English, Hungarian, German, French, and Spanish. Players choose their own language independently of the server's default, and the choice is remembered across sessions.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        How It Works
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Run <span class="font-mono text-indigo-400">/daily language</span> to open the selector and pick a language with a single click.</li>
+                        <li>The selection is saved per player and takes effect immediately, no rejoin required.</li>
+                        <li>Server operators set the default language for new players in <span class="font-mono text-purple-400 text-xs">config.yml</span>.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        Supported Languages
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>English, Hungarian, German, French, and Spanish, fully translated.</li>
+                        <li>Every translation file lives in its own editable YML, ready for further customization.</li>
+                        <li>Any missing text automatically falls back to English, so nothing is ever left blank.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
     </main>
