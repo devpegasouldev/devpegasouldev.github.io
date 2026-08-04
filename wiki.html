@@ -78,7 +78,7 @@
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/daily</td>
                             <td class="px-4 py-3 font-mono text-purple-400 text-xs">customdailyrewards.use<br><span class="text-slate-500">(default: true)</span></td>
-                            <td class="px-4 py-3">Opens the rewards GUI.</td>
+                            <td class="px-4 py-3">Opens the rewards GUI (admins also see a shortcut button into settings).</td>
                         </tr>
                         <tr class="hover:bg-slate-800/30 transition">
                             <td class="px-4 py-3 font-mono text-indigo-400">/daily settings</td>
@@ -161,10 +161,14 @@
                 <li><span class="text-indigo-400 font-semibold">Commands:</span> Console commands with <code class="text-xs bg-slate-800 px-1 rounded">%player%</code> and <code class="text-xs bg-slate-800 px-1 rounded">%amount%</code> placeholder support.</li>
                 <li><span class="text-indigo-400 font-semibold">Cooldowns:</span> Simple duration formatting (e.g. 2h30m, 90m).</li>
                 <li><span class="text-indigo-400 font-semibold">Required Rank:</span> Direct LuckPerms integration.</li>
-                <li><span class="text-indigo-400 font-semibold">Display Item:</span> Click with an item on your cursor to apply its material as the icon.</li>
+                <li><span class="text-indigo-400 font-semibold">Display Item:</span> Click with an item on your cursor to inherit its material — plus its exact custom name and lore, if it has any.</li>
                 <li><span class="text-indigo-400 font-semibold">Toggles:</span> One-click switches for Glowing, Auto-Claim, and Broadcast on Claim.</li>
                 <li><span class="text-indigo-400 font-semibold">Custom Model Data:</span> Click while holding a resource-pack item to inherit its material and model data in one step, or type a value manually in chat.</li>
             </ul>
+
+            <p class="text-sm">
+                Both the Reward Manager and the Reward Editor are fully localized — every button, lore line, and toggle status renders in whichever language the viewing admin has selected, not just the player-facing menu.
+            </p>
         </div>
 
         <!-- Language Selector Section -->
@@ -197,6 +201,41 @@
                         <li>English, Hungarian, German, French, and Spanish, fully translated.</li>
                         <li>Every translation file lives in its own editable YML, ready for further customization.</li>
                         <li>Any missing text automatically falls back to English, so nothing is ever left blank.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- NPC Section -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">NPC</h2>
+
+            <p class="text-sm">
+                The plugin ships its own lightweight NPC system — no Citizens or other dependency required. Spawn one anywhere, and players can right-click it to open the exact same rewards menu as <span class="font-mono text-indigo-400">/daily</span>.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        Setup
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li><span class="font-mono text-indigo-400">/dailyadmin npc create</span> spawns an NPC at your exact location.</li>
+                        <li><span class="font-mono text-indigo-400">/dailyadmin npc remove</span> removes the nearest one.</li>
+                        <li>Fully configurable in <span class="font-mono text-purple-400 text-xs">config.yml</span>: entity type, display name, and glow effect.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        Player-Facing by Design
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>The NPC always opens a plain rewards menu — the admin Reward Manager shortcut never appears there, even for OPs.</li>
+                        <li>Admins reach settings through <span class="font-mono text-indigo-400">/daily settings</span> or the shortcut button shown inside the command-opened menu instead.</li>
+                        <li>Cooldowns, permission locks, and live countdowns behave identically to opening the menu with <span class="font-mono text-indigo-400">/daily</span>.</li>
                     </ul>
                 </div>
             </div>
