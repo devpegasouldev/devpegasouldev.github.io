@@ -46,8 +46,23 @@
         
         <div>
             <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">Documentation</span>
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-2 mb-3">CustomDailyRewards Wiki</h1>
-            <p class="text-slate-400">A configurable daily rewards plugin for Paper 1.21.8 / Java 21.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mt-2 mb-3">Plugin Wiki</h1>
+            <p class="text-slate-400">Full command, permission, and GUI reference for every active PEGASOULDEV plugin.</p>
+        </div>
+
+        <!-- Plugin Jump Selector -->
+        <div class="bg-cardbg border border-slate-800 rounded-2xl p-3 flex flex-wrap gap-2 sticky top-20 z-40">
+            <a href="#customdailyrewards" class="flex-1 text-center bg-slate-900/60 hover:bg-indigo-600 text-slate-300 hover:text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition border border-slate-800">
+                CustomDailyRewards
+            </a>
+            <a href="#psitemjoin" class="flex-1 text-center bg-slate-900/60 hover:bg-indigo-600 text-slate-300 hover:text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition border border-slate-800">
+                psItemJoin
+            </a>
+        </div>
+
+        <div id="customdailyrewards">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">CustomDailyRewards</h2>
+            <p class="text-slate-400 text-sm">A configurable daily rewards plugin for Paper 1.21.8 / Java 21.</p>
         </div>
 
         <!-- Quick Links Card -->
@@ -236,6 +251,219 @@
                         <li>The NPC always opens a plain rewards menu — the admin Reward Manager shortcut never appears there, even for OPs.</li>
                         <li>Admins reach settings through <span class="font-mono text-indigo-400">/daily settings</span> or the shortcut button shown inside the command-opened menu instead.</li>
                         <li>Cooldowns, permission locks, and live countdowns behave identically to opening the menu with <span class="font-mono text-indigo-400">/daily</span>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="psitemjoin" class="pt-8">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight mb-2">psItemJoin</h2>
+            <p class="text-slate-400 text-sm">A fully GUI-driven join-item plugin for Paper 1.21.8 / Java 21. No file editing required, ever.</p>
+        </div>
+
+        <!-- Quick Links Card -->
+        <div class="bg-cardbg border border-slate-800 rounded-2xl p-6 flex items-center justify-between">
+            <div>
+                <h3 class="text-white font-semibold">Modrinth Page</h3>
+                <p class="text-slate-400 text-sm">Download the plugin and check for updates.</p>
+            </div>
+            <a href="https://modrinth.com/plugin/psitemjoin" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2.5 rounded-xl transition text-sm shadow-lg shadow-indigo-500/20">
+                Modrinth
+            </a>
+        </div>
+
+        <!-- Overview -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Overview</h2>
+            <p class="text-sm">
+                psItemJoin gives players configurable items the moment they join your server — welcome kits, gadgets, cosmetic tools, or rank-gated perks. Every property of every item is built and edited entirely through an in-game GUI. There is no config file to hand-edit and no server restart needed to test a change.
+            </p>
+        </div>
+
+        <!-- Commands & Permissions -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Commands & Permissions</h2>
+
+            <div class="overflow-x-auto mt-4">
+                <table class="w-full text-sm text-left text-slate-300">
+                    <thead class="text-xs text-slate-400 uppercase bg-slate-900/50">
+                        <tr>
+                            <th scope="col" class="px-4 py-3 rounded-tl-lg">Command</th>
+                            <th scope="col" class="px-4 py-3">Permission</th>
+                            <th scope="col" class="px-4 py-3 rounded-tr-lg">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/80">
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/psitemjoin settings</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">psitemjoin.admin<br><span class="text-slate-500">(default: op)</span></td>
+                            <td class="px-4 py-3">Opens the Item Manager GUI — create, edit, and delete join items.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/psitemjoin reload</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">psitemjoin.reload<br><span class="text-slate-500">(default: op)</span></td>
+                            <td class="px-4 py-3">Reloads config.yml, the language file, and every stored item.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/psitemjoin give &lt;player&gt; &lt;itemId&gt;</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">psitemjoin.admin</td>
+                            <td class="px-4 py-3">Manually gives a configured item to an online player, bypassing join logic.</td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/30 transition">
+                            <td class="px-4 py-3 font-mono text-indigo-400">/psitemjoin help</td>
+                            <td class="px-4 py-3 font-mono text-purple-400 text-xs">-</td>
+                            <td class="px-4 py-3">Lists all available sub-commands.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-lg font-bold text-white pt-4">Additional Permissions</h3>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                <li><span class="font-mono text-purple-400">psitemjoin.bypasscooldown</span> <span class="text-slate-400">— skip an item's command cooldown (default: op).</span></li>
+                <li><span class="font-mono text-purple-400">&lt;custom node&gt;</span> <span class="text-slate-400">— any permission you set per item to gate who receives it (e.g. <span class="font-mono text-xs">vip.gadget</span>).</span></li>
+            </ul>
+        </div>
+
+        <!-- In-game Admin GUI -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">The In-Game Admin GUI</h2>
+
+            <p class="text-sm">
+                Running <span class="font-mono text-indigo-400">/psitemjoin settings</span> opens the Item Manager: every join item as a clickable icon, plus a button to create a new one from scratch. Clicking any item opens its dedicated Item Editor.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        Material & Appearance
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Hold any item from your own inventory and click the editor's preview slot.</li>
+                        <li>Its Material, Display Name, Lore, and Custom Model Data are copied instantly.</li>
+                        <li>Display Name and Lore can also be retyped freely through the chat-input system.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        Chat-Input System
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Text fields (name, lore, permission, slot, cooldown) use chat input instead of an anvil GUI.</li>
+                        <li>Click a property, then type your change directly into chat.</li>
+                        <li>Type <span class="font-mono text-rose-400">cancel</span> to abort at any point.</li>
+                        <li>Lore accepts one line per message — type <span class="font-mono text-emerald-400">done</span> to finish.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        Item Flags
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li><strong class="text-white">Un-droppable:</strong> blocks the item from being dropped.</li>
+                        <li><strong class="text-white">Un-placeable:</strong> blocks the item from being placed as a block.</li>
+                        <li><strong class="text-white">Un-moveable:</strong> locks the item to its assigned slot inside the player's inventory.</li>
+                        <li><strong class="text-white">Keep on death:</strong> the item survives death and is returned on respawn.</li>
+                        <li><strong class="text-white">Glow:</strong> a one-click enchantment glint toggle, no enchant required.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                        Slot Assignment
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Type any inventory slot from <span class="font-mono text-indigo-400">0-35</span>, or <span class="font-mono text-indigo-400">40</span> for the offhand slot.</li>
+                        <li>The editor preview shows whether the chosen slot is Hotbar, Inventory, or Offhand.</li>
+                        <li>If a slot is already occupied on join, the item overwrites whatever is there.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-bold text-white pt-4">Command Execution</h3>
+            <p class="text-sm">
+                Attach any number of commands to an item, each bound to either a left-click or a right-click. The Commands screen lets you pick the trigger and executor (Console or Player) before typing the command itself in chat — the <span class="font-mono text-purple-400">%player%</span> placeholder is replaced with the clicking player's name.
+            </p>
+
+            <h3 class="text-lg font-bold text-white pt-4">World Selection (Multiverse Support)</h3>
+            <p class="text-sm">
+                The World Selector reads <span class="font-mono text-indigo-400">Bukkit.getWorlds()</span> live, so every currently loaded world — vanilla or Multiverse — appears automatically as its own toggle icon. Enable "Allow All Worlds" to hand the item out everywhere, or disable it and toggle specific worlds on individually (for example: given in <span class="font-mono text-purple-400">lobby</span>, withheld in <span class="font-mono text-purple-400">survival</span>).
+            </p>
+        </div>
+
+        <!-- Bonus Features -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Bonus Features</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        Permission / Rank Gating
+                    </h3>
+                    <p class="text-sm">
+                        Require a specific permission node before an item is granted — perfect for VIP gadgets or rank-exclusive starter kits. Leave it blank and the item is given to everyone.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        First Join vs. Every Join
+                    </h3>
+                    <p class="text-sm">
+                        Toggle whether an item is handed out on every single login, or only once, the very first time a player ever joins. First-join records are tracked per player, per item.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        Command Cooldown
+                    </h3>
+                    <p class="text-sm">
+                        Set a per-item cooldown, in seconds, to stop players from spam-clicking a bound command. Players with <span class="font-mono text-purple-400 text-xs">psitemjoin.bypasscooldown</span> skip the wait entirely.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Language Selector Section -->
+        <div class="bg-cardbg border border-slate-800 rounded-3xl p-8 md:p-12 space-y-6 text-slate-300 leading-relaxed">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-4">Language Selector</h2>
+
+            <p class="text-sm">
+                Every admin-facing GUI title, chat prompt, and system message is pulled from an editable language file. English and Hungarian ship out of the box, selected via <span class="font-mono text-purple-400 text-xs">language</span> in <span class="font-mono text-purple-400 text-xs">config.yml</span>.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        How It Works
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Set <span class="font-mono text-indigo-400">language: en</span> or <span class="font-mono text-indigo-400">language: hu</span> in config.yml.</li>
+                        <li><span class="font-mono text-indigo-400">/psitemjoin reload</span> applies the change immediately, no restart required.</li>
+                        <li>Any missing key automatically falls back to English so nothing is ever left blank.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-800/80">
+                    <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                        Editable Files
+                    </h3>
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li>Each language lives in its own file under <span class="font-mono text-purple-400 text-xs">/lang/</span> (e.g. en.yml, hu.yml).</li>
+                        <li>Server owners are free to add further languages by copying the file structure.</li>
+                        <li>Covers GUI titles, chat prompts, and every system message.</li>
                     </ul>
                 </div>
             </div>
